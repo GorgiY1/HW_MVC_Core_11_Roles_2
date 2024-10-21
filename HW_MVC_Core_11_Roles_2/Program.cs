@@ -18,6 +18,13 @@ namespace HW_MVC_Core_11_Roles_2
                     );
             });
 
+            //builder.Services.AddDbContext<ProductContext>(options =>
+            //{
+            //    options.UseSqlServer(
+            //        builder.Configuration.GetConnectionString("ProductConnection")
+            //        );
+            //});
+
             builder.Services.AddSession();
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options =>
@@ -56,7 +63,7 @@ namespace HW_MVC_Core_11_Roles_2
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.MapRazorPages();
             app.UseStaticFiles();
             
             app.MapControllerRoute(

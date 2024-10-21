@@ -103,7 +103,7 @@ namespace Shop_app.Controllers
                 return BadRequest("Id or Name Role are important ...");
             }
             var user = await _userManager.FindByIdAsync(id);
-            if(user == null)
+            if (user == null)
             {
                 return NotFound("The user not found ...");
             }
@@ -120,7 +120,7 @@ namespace Shop_app.Controllers
             return BadRequest(Json(result.Errors));
         }
         // POST-метод для создания нового пользователя
-        
+
         [HttpGet]
         public IActionResult Login()
         {

@@ -11,5 +11,5 @@ public class UserContext : IdentityDbContext
     {
         // Базовый класс IdentityDbContext настроит таблицы для идентификации пользователей
     }
-    public DbSet<Product> Products { get; set; }
+    //public DbSet<Product> Products { get; set; }
 }

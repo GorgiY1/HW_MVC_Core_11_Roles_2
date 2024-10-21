@@ -2,7 +2,7 @@
     background: linear-gradient(to bottom right, #1e1e1e, #0d0d0d);
     color: wheat;
     font-family: 'Roboto', sans-serif;
-   /* display: flex;
+    /*display: flex;
     justify-content: center;
     align-items: center;*/
     height: 100vh;
@@ -330,10 +330,6 @@ tr:hover {
         font-size: 1rem;
         color: #bfbfbf;
     }
-table {
-    display: none;
-}
-
 h1 {
     margin: 10px 15px;
     padding: 10px 20px;

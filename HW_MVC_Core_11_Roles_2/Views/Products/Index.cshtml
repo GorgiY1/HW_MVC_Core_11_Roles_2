@@ -1,40 +1,35 @@
-﻿
-@model Shop_app.Models.Product
+﻿@model IEnumerable<Shop_app.Models.Product>
+
 @{
-    ViewData["Title"] = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
 }
 
-<h1>List of Products</h1>
-
-<h4>Product</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <table class="table">
-            <table class="table table-bordered">
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+            <table>
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
                         <th>Price</th>
                         <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @*@@*foreach (var product in Model)
-                        {
-                            <tr>
-                                <td>@product.Name</td>
-                                <td>@product.Price</td>
-                                <td>@product.Description</td>
-                            </tr>
-                        }*@
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.Id</td>
+                            <td>@product.Name</td>
+                            <td>@product.Price</td>
+                            <td>@product.Description</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
-        </table>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>

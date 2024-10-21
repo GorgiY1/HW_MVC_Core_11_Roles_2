@@ -31,11 +31,6 @@
                     <a asp-controller="User" asp-action="CreateRole">Create Role</a>
                     <a asp-controller="User" asp-action="AssignRole">Manage of Roles</a>
                 </div>
-
-
-                <!-- Card for Products -->
-
-
             }
             else
             {
@@ -45,8 +40,8 @@
                     <a asp-controller="User" asp-action="LogIn">LogIn</a>
                 </div>
             }
-            @if (User.IsInRole("admin"))
-            {
+            @*@if (User.IsInRole("admin"))
+            {*@
                 <div class="menu">
                     <h1>Products</h1>
                     <a class="menu" asp-controller="Products" asp-action="Index">Read</a>
@@ -58,14 +53,41 @@
 
                     <a class="menu" asp-controller="Products" asp-action="Delete">Delete</a>
                 </div>
-            }
+            @*}*@
 
 
         </header>
         <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
+            @RenderBody()
+            @*<div>
+                <div>
+                   
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        <td>product.Id</td>
+                                        <td>product.Name</td>
+                                        <td>product.Price</td>
+                                        <td>product.Description</td>
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <input type="submit" value="Create" />
+                    
+                </div>
+            </div>*@
+
         </div>
         <hr />
         <footer>
