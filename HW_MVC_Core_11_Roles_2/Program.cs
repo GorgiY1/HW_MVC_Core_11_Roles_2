@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using HW_MVC_Core_11_Roles_2.DbContexts;
 
 namespace HW_MVC_Core_11_Roles_2
 {
@@ -18,12 +19,12 @@ namespace HW_MVC_Core_11_Roles_2
                     );
             });
 
-            //builder.Services.AddDbContext<ProductContext>(options =>
-            //{
-            //    options.UseSqlServer(
-            //        builder.Configuration.GetConnectionString("ProductConnection")
-            //        );
-            //});
+            builder.Services.AddDbContext<ProductDbContext>(options =>
+            {
+                options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("DefaultConnection")
+                    );
+            });
 
             builder.Services.AddSession();
 
